@@ -4,6 +4,7 @@ require 'pg'
 require 'aws-sdk-s3'
 require './lib/mydatabase' # moduleの読み込み
 require './lib/image_uploader' # classの読み込み
+require './lib/sendmail' # classの読み込み
 
 get '/' do
   @data = Mydatabase.exec('select * from board_contents;')
@@ -33,5 +34,6 @@ post '/upload' do
   upload_image = params[:file]
   uploader = ImageUploader.new(upload_image)
   uploader.upload_image
+  Sendmail.send_message("smatsuda@x-hack.jp", "おはよう", "テスト : " + uploader.public_url)
   redirect '/'
 end
