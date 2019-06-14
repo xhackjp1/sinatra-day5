@@ -2,8 +2,8 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'pg'
 require 'aws-sdk-s3'
-require './mydatabase' # moduleの読み込み
-require './image_uploader' # classの読み込み
+require './lib/mydatabase' # moduleの読み込み
+require './lib/image_uploader' # classの読み込み
 
 get '/' do
   @data = Mydatabase.exec('select * from board_contents;')
