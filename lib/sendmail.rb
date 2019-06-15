@@ -1,4 +1,5 @@
 require 'mail'
+require 'dotenv/load'
 
 module Sendmail
   def send_message(mail_to, mail_subject, mail_body)
