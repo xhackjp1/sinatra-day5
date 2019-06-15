@@ -37,3 +37,21 @@ $ ruby app.rb
 ```
 
 7. [http://localhost:4567](http://localhost:4567) にアクセス
+
+## Rakeタスク実行
+
+```
+$ rake [タスク名]
+```
+
+## 定期実行
+
+- 登録
+```
+$ bundle exec whenever --update-crontab
+```
+
+- 確認
+```
+$ bundle exec whenever
+```
