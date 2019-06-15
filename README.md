@@ -34,7 +34,7 @@ AWS_S3_BUCKET_NAME=''
 6. ターミナルで下記のコマンドを実行
 
 ```
-$ ruby app.rb
+$ bundle exec ruby app.rb
 ```
 
 7. [http://localhost:4567](http://localhost:4567) にアクセス
