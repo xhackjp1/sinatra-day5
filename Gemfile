@@ -11,3 +11,6 @@ gem 'sinatra-contrib'
 gem 'pg'
 gem 'dotenv'
 gem 'aws-sdk-s3'
+gem 'whenever', require: false
+gem 'rake'
+gem 'mail'
