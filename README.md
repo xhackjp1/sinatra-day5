@@ -9,6 +9,7 @@
 ```
 $ git clone https://github.com/x-hack-git/sinatra-day5
 $ cd sinatra-day5
+$ bundle install --path bendor/bundle
 ```
 
 4. ターミナルで下記のコマンドを実行
