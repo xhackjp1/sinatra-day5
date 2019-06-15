@@ -1,13 +1,17 @@
 require 'sinatra'
+require 'sinatra/activerecord'
 require 'sinatra/reloader'
 require 'pg'
 require 'aws-sdk-s3'
 require './lib/mydatabase' # moduleの読み込み
 require './lib/image_uploader' # classの読み込み
 require './lib/sendmail' # classの読み込み
+require './models'
+
+set :database_file, "./database.yml"
 
 get '/' do
-  @data = Mydatabase.exec('select * from board_contents;')
+  @data = BoardContent.all
   erb :index
 end
 
@@ -15,9 +19,7 @@ post '/comments' do
   name = params['name']
   comment = params['comment']
   # sqlを組み立てる
-  sql = "INSERT INTO board_contents (name, comment) VALUES ('#{name}', '#{comment}');"
-  # sqlを実行する
-  @data = Mydatabase.exec(sql)
+  BoardContent.create(name: name, comment: comment)
   redirect '/'
 end
 

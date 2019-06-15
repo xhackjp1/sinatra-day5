@@ -1,0 +1,8 @@
+development:
+  adapter: "postgresql"
+  database: <%= ENV['DATABASE_NAME'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  encoding: utf8
+  port: <%= ENV['DATABASE_PORT'] %>
