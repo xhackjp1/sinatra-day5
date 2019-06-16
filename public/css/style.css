@@ -1,3 +1,7 @@
-body {
-  color: red;
+div {
+  width: 300;
+  background-color: #cef4d6;
+  text-align: right;
+  margin: 1.0em;
+  padding: 1.0em;
 }

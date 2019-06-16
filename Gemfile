@@ -16,3 +16,4 @@ gem 'aws-sdk-s3'
 gem 'whenever', require: false
 gem 'rake'
 gem 'mail'
+gem 'nokogiri'

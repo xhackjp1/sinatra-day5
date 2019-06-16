@@ -21,10 +21,10 @@ set :environment, "development"
 # set :output, 'log/cron.log'
 
 # http://d.hatena.ne.jp/kk_Ataka/20160605/1465121213
-every 60.minute do
+every 1.day, :at => '7:30 am' do
   rake "test"
 end
 
-every 60.minute do
-  rake "sample"
+every 1.minute do
+  rake "scraping"
 end
