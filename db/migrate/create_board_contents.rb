@@ -1,4 +1,4 @@
-require './mydatabase'
+require './lib/mydatabase'
 
 Mydatabase.exec("
   CREATE TABLE board_contents (
